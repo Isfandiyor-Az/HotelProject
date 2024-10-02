@@ -1,0 +1,40 @@
+{% load static%}
+{% if user.is_authenticated %}
+<html>
+  <head>
+     <title>News Hotel </title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="container">
+          <h1 class="logo"><a href="#">News Page</a></h1>
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about'  %}">About</a></li>
+            <li><a href="{% url 'contact' %}" >Contact</a></li>
+            <li><a href="{% url 'logout' %}">Log out</a></li>
+            <li><a href="{% url 'news' %}" class="current">News</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+      <div class="features">
+        <h1 style="text-align: center">Our Today's News</h1>
+          {%for news in object_list%}
+            <li>{{news.news_title}}</li>
+            <li>{{news.news_text}}</li>
+            <img src="{{news.news_image.url}}"  alt="News Pictures"/>
+            <span>{{ error }}</span>
+    </div>
+    </body>
+  </html>
+  {%endfor%}
+  {%endif%}

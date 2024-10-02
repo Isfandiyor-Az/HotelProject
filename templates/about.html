@@ -1,0 +1,106 @@
+{% load static%}
+{% if user.is_authenticated %}
+<html>
+  <head>
+    <title>Hotel Website</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+  </head>
+
+    <body>
+    <header>
+      <nav id="navbar">
+        <div class="container">
+          <h1 class="logo"><a href="#">About Page</a></h1>
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about'%}" class="current">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'logout' %}">Log out</a></li>
+            <li><a href="{% url 'news' %}">News</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="about-info" class="bg-light">
+      <div class="container">
+        <div class="info-left">
+          <h1><span class="text-primary">About</span> Our Hotel</h1>
+          <p>
+         Timeshare and destination clubs are a form of property ownership involving ownership of
+         an individual unit of accommodation for seasonal usage. A motel is a small-sized low-rise
+         lodging with direct access to individual rooms from the car park. Boutique hotels are typically
+         hotels with a unique environment or intimate setting. A number of hotels have entered the public
+         consciousness through popular culture, such as the Ritz Hotel in London. Some hotels are built specifically as destinations in themselves, for example casinos and holiday resorts.
+
+          </p>
+          <p>
+          Most hotel establishments are run by a general manager who serves as the head executive (often referred to as the "hotel manager"),
+          department heads who oversee various departments within a hotel (e.g., food service), middle managers, administrative staff, and line-level supervisors.
+          </p>
+          <p>
+          Facilities offering hospitality to travellers featured in early civilizations. In Greco-Roman culture and
+          in ancient Persia, hospitals for recuperation and rest were built at thermal baths. Guinness World Records officially recognised Japan's Nishiyama Onsen Keiunkan,
+          founded in 705, as the oldest hotel in the world.[1] During the Middle Ages, various religious orders at monasteries and abbeys would offer accommodation for travellers on the road.
+          The precursor to the modern hotel was the inn of medieval Europe, possibly dating back to the rule of Ancient Rome. These would provide for the needs of travellers, including food and
+          lodging, stabling and fodder for the traveller's horses and fresh horses for mail coaches. Famous London examples of inns include the George and the Tabard. A typical layout of an into
+          featured an inner court with bedrooms on the two sides, with the kitchen and parlour at the front and the stables at the back.
+          For a period of about 200 years from the mid-17th century, coaching inns served as a place for lodging for coach travellers (in other words, a roadhouse).
+          Coaching inns stabled teams of horses for stagecoaches and mail coaches and replaced tired teams with fresh teams. Traditionally they were seven miles apart, but this depended very much on the terrain.
+          Tremont House in Boston, United States, a luxury hotel, the first to provide indoor plumbing The Boody House Hotel in Toledo, Ohio
+          Some English towns had as many as ten such inns and rivalry between them became intense, not only for the income from the stagecoach operators but
+          for the revenue from the food and drink supplied to the wealthy passengers. By the end of the century, coaching inns were being run more professionally,
+          with a regular timetable being followed and fixed menus for food. Boutique hotels are smaller independent non-branded hotels that often contain mid-scale to upscale facilities of varying size in unique or intimate settings with full-service accommodations.
+          </p>
+        </div>
+        <div class="info-right">
+          <img src="{% static 'img/photo-2.jpg' %}" alt="our beautiful hotel" />
+        </div>
+      </div>
+    </section>
+
+    <div class="clr"></div>
+
+    <section id="testimonials">
+      <div class="container">
+        <h2>What Our guests say</h2>
+
+        <div class="testimonial bg-primary">
+          <img src="{% static 'img/isfanchik_1.jpg'%}" alt="Zumrad" />
+          <p>
+           Everything was wonderful. The staff is extremely responsive and reasonable prices,
+           the room is spotless. Receptionists woke up for an early flight.
+           The apple pie specialty was a cherry on top this all. In fact, This hotel
+           was rather convenient and the servers were very helpful and The foods were highly
+           delicious and tasty. Place was super.
+           The  first room smelled bad, and only when I think, they gave me another room.
+           I definitely will not go back. Location is perfect. But the furniture is beat up,
+           lights were not working.
+
+          </p>
+        </div>
+        <div class="testimonial bg-primary">
+          <img src="{% static 'img/isfanchik_2.jpg'%}" alt="Qimmat" />
+          <p>
+            The hotel is lovely.Staff is polite, the server is excellent. We booked the guided tour
+            around the town at the desk and absolutely enjoyed it. The guide that hotel hired was
+            amusing and extremely professional. I wanted to enjoy my stay there, but I couldn't.
+            The hotel was a disappointment from the moment we arrived. One of the elevators in the lobby
+            wasn't working, so working we had to wait forever to get upstairs with all our luggage.
+            And there weren't enough towels in the room.
+
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="main-footer">
+      <p>Hotel BT &copy; 2022, All rights Reserved</p>
+    </footer>
+  </body>
+
+</html>
+ {% else %}
+    <p>You are not logged in.</p>
+    <a href="{% url 'login' %}">Log In</a>
+  {% endif %}

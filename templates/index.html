@@ -1,0 +1,89 @@
+{% load static%}
+<html>
+  <head>
+    <title>HBT - Hotel Website</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+  </head>
+
+    <body>
+    <header>
+      <nav id="navbar">
+        <div class="container">
+          <h1 class="logo"><a href="#">HBT</a></h1>
+          <ul>
+            <li><a href="#" class="current">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contact'%}">Contact</a></li>
+            <li><a href="{% url 'logout' %}">Log out</a></li>
+            <li><a href="{% url 'news'%}">News</a></li>
+          </ul>
+        </div>
+      </nav>
+      {% if user.is_authenticated %}
+      <div id="showcase">
+        <div class="container">
+          <div class="showcase-content">
+            <h1><span class="text-primary">Enjoy</span> Your Stay</h1>
+            <p>
+              Our hotel is the best Hotel in our state and Many people come our hotel because
+              Our hotel is reasonable prices for everything.
+            </p>
+            <a href="{% url 'about' %}" class="btn">About Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="home-info" class="bg-dark">
+      <div class="info-img"></div>
+      <div class="info-content">
+        <h2><span class="text-primary">The History</span> Of our hotel</h2>
+        <p>
+          A hotel is an establishment that provides paid lodging on a short-term basis.
+          Facilities provided inside a hotel room may range from a modest-quality mattress in
+          a small room to large suites with bigger, higher-quality beds, a dresser, a refrigerator and
+          other kitchen facilities, upholstered chairs, a flat screen television, and en-suite bathrooms.
+          Hotel rooms are usually numbered (or named in some smaller hotels and B&Bs) to allow guests to identify their room.
+          Some boutique, high-end hotels have custom decorated rooms. Some hotels offer meals as part of a room and board arrangement.
+          In Japan, capsule hotels provide a tiny room suitable only for sleeping and shared bathroom facilities.
+        </p>
+        <a href="{% url 'about' %}" class="btn btn-light">Read More</a>
+      </div>
+    </section>
+    <section id="features">
+      <div class="box bg-light">
+        <i class="fas fa-hotel fa-3x"></i>
+        <h3>Great Location</h3>
+        <p>
+          Our Hotel is Location in the downtown near the city of US and New York state.
+        </p>
+      </div>
+      <div class="box bg-primary">
+        <i class="fas fa-utensils fa-3x"></i>
+        <h3>Free Meals</h3>
+        <p>
+          Every day, Our have a variety of mealy and They are only free for our customers
+        </p>
+      </div>
+      <div class="box bg-light">
+        <i class="fas fa-dumbbell fa-3x"></i>
+        <h3>Fitness Room</h3>
+        <p>
+         Also,We have our fitness Room and there, you can work out.
+        </p>
+      </div>
+    </section>
+    <div class="clr"></div>
+    <footer id="main-footer">
+      <p>Hotel BT &copy; 2022, All rights Reserved</p>
+    </footer>
+  </body>
+  {% else %}
+    <p>No Registar</p>
+  {%endif%}
+</html>
