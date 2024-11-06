@@ -9,5 +9,4 @@ urlpatterns = [
     path('about/', AboutPage.as_view(), name='about'),
     path('contact/', ContactPage.as_view(), name='contact'),
     path('news/', NewPost.as_view(), name='news'),
-
 ]

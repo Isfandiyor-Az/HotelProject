@@ -1,0 +1,89 @@
+/* Background styling for the entire page */
+body {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientBackground 10s ease infinite;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Animated gradient keyframes */
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Form container styling */
+form {
+  background: linear-gradient(135deg, #ffffff, #f8f9fd);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Form title */
+h4 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+/* Button styling */
+button[type="submit"] {
+  background: linear-gradient(135deg, #6c63ff, #8e94f2);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #5a54e6, #757de8);
+}
+
+/* Help text styling */
+.helptext {
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* Password requirements styling */
+#id_password1_helptext,
+#id_password2_helptext {
+  font-size: 0.8em;
+  color: #999;
+  margin-top: 5px;
+  text-transform: lowercase;
+  line-height: 1.3;
+}

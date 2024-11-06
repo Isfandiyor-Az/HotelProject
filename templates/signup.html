@@ -26,18 +26,17 @@
   <meta charset="UTF-8">
   <title>Sign up</title>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'><link rel="stylesheet" href="{% static 'dist2/style.css'%}">
-
+  <link rel="stylesheet" href="{% static 'css/somestyle.css' %}">
 </head>
 <body >
 <!-- partial:index.partial.html -->
 <div class="container">
   <form method="post">
-
     <div class="row">
       <h4>Sign up</h4>
         {% csrf_token %}
         {{ form.as_p }}
-         <button type="button" class="btn btn-primary">Sign up</button>
+         <button type="submit" class="btn btn-primary" >Sign up</button>
 <!--         <button type="submit">Sign up</button>-->
 <!--          <button type="button" class="btn btn-primary btn-rounded">Sign up</button>-->
 <!--      <button class="button login__submit">-->
