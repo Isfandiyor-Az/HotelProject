@@ -19,8 +19,29 @@ This repository contains a **Hotel Management Website** developed using **Python
 - **Version Control:** Git & GitHub 🌍
 
 ## 📂 Project Structure
+📦 Hotel Management Website
+│-- 📁 hotel_project/ # Main Django project directory
+│-- 📁 hotel/ # Django app handling hotel functionalities
+│-- 📁 templates/ # HTML templates for UI
+│-- 📁 static/ # Static files (CSS, JS, Images)
+│-- 📁 media/images/ # Uploaded images for hotel rooms
+│-- 📄 manage.py # Django project management script
+│-- 📄 db.sqlite3 # Database file
+│-- 📄 README.md # Project documentation
+
+## 🚀 Installation & Setup
+
+Follow these steps to set up the project on your local machine:
 
 
+
+
+
+
+## 🏗️ Future Enhancements
+🔹 Add payment integration for online bookings 💳
+🔹 Implement admin panel for hotel staff 🛎️
+🔹 Improve UI/UX with animations and better styles 🎨
 
 
 
