@@ -31,7 +31,14 @@ This repository contains a **Hotel Management Website** developed using **Python
 
 ## 🚀 Installation & Setup
 
+## 🚀 Installation & Setup
+
 Follow these steps to set up the project on your local machine:
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/yourusername/hotel-management.git
+cd hotel-management
 
 
 
