@@ -29,7 +29,16 @@ This repository contains a **Hotel Management Website** developed using **Python
 │-- 📄 db.sqlite3 # Database file
 │-- 📄 README.md # Project documentation
 
-## 🚀 Installation & Setup
+## 🏗️ Future Enhancements
+🔹 Add payment integration for online bookings 💳
+🔹 Implement admin panel for hotel staff 🛎️
+🔹 Improve UI/UX with animations and better styles 🎨
+
+## 🔑 Admin Panel Login Details
+For logging into the admin panel:
+Username: Admin
+Password: 1212
+
 
 ## 🚀 Installation & Setup
 
@@ -41,15 +50,15 @@ git clone https://github.com/yourusername/hotel-management.git
 cd hotel-management
 
 
+### 2️⃣ Create & Activate Virtual Environment
+python -m venv venv
+source venv/bin/activate   # On macOS/Linux
+venv\Scripts\activate      # On Windows
 
+ ### 3️⃣Install Dependencies
+pip install -r requirements.txt
 
-
-
-## 🏗️ Future Enhancements
-🔹 Add payment integration for online bookings 💳
-🔹 Implement admin panel for hotel staff 🛎️
-🔹 Improve UI/UX with animations and better styles 🎨
-
-
-
-For log in the admin panel username : Admin, password : 1212.
+### 4️⃣ Run Database Migrations
+python manage.py migrate
+5️⃣ Start the Server
+python manage.py runserver
